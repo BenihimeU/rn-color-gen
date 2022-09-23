@@ -1,0 +1,41 @@
+{
+  "name": "unittests",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest --coverage",
+    "lint": "eslint .",
+    "postinstall": "patch-package",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios --udid='BEAF2CF5-02BC-43FC-8FE2-24268F1F2E19'",
+    "pod-install": "cd ios && pod install && cd ..",
+    "clean:android": "cd android && ./gradlew clean && cd ..",
+    "release:android": "cd android && ./gradlew clean && ./gradlew assembleRelease && cd ..",
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
+  },
+  "dependencies": {
+    "native-base": "^3.4.16",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "react": "18.1.0",
+    "react-native": "0.70.1",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-svg": "12.1.1",
+    "values.js": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^11.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.72.1",
+    "react-test-renderer": "18.1.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
