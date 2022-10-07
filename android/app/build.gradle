@@ -256,6 +256,11 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+    //Razorpay Library
+    implementation project(':react-native-razorpay')
+
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }
